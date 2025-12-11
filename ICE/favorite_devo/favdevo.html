@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Favorite Devotionals</title>
+  <link rel="stylesheet" href="styles/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="header-image">
+        <h1>My Favorite<br>Devotionals</h1>
+      </div>
+    </header>
+
+    <main>
+      <div class="content-box">
+        <h2>Table of Favorites</h2>
+
+        <!-- Table of Favorite Devotionals -->
+        <table id="devotionalTable">
+          <thead>
+            <tr>
+              <th>Speaker</th>
+              <th>Title</th>
+              <th>Location</th>
+              <th>Year</th>
+              <th>Reason</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Devotional rows will appear here -->
+          </tbody>
+        </table>
+
+        <h2>Add a New Devotional</h2>
+        <form id="devotionalForm">
+          <label for="speaker">Speaker:</label>
+          <input type="text" id="speaker" name="speaker" placeholder="Enter speaker's name" required>
+
+          <label for="title">Title:</label>
+          <input type="text" id="title" name="title" placeholder="Enter devotional title" required>
+
+          <label for="location">Location:</label>
+          <input type="text" id="location" name="location" placeholder="Enter location" required>
+
+          <label for="year">Year:</label>
+          <input type="number" id="year" name="year" placeholder="Enter year" required>
+
+          <label for="reason">Reason:</label>
+          <input type="text" id="reason" name="reason" placeholder="Why this devotional is your favorite" required>
+
+          <button type="submit">Add Devotional</button>
+        </form>
+      </div>
+    </main>
+  </div>
+
+  <footer>
+    <ul>
+      <a href="../../../../index.html">Home</a>
+      <a href="../../../../WWR/index.html">WWR</a>
+      <a href="../../../../ice.html">ICE</a>
+      <a href="../../../../about_me.html">About Me</a>
+    </ul>
+    <p>&copy; 2025 Spencer T. Crosland</p>
+  </footer>
+
+  <script>
+    const form = document.getElementById('devotionalForm');
+    const tableBody = document.querySelector('#devotionalTable tbody');
+
+    // Load saved devotionals from localStorage
+    let devotionals = JSON.parse(localStorage.getItem('devotionals')) || [];
+
+    // Function to render table
+    function renderTable() {
+      tableBody.innerHTML = '';
+      devotionals.forEach((devotional, index) => {
+        const newRow = document.createElement('tr');
+        newRow.innerHTML = `
+          <td>${devotional.speaker}</td>
+          <td>${devotional.title}</td>
+          <td>${devotional.location}</td>
+          <td>${devotional.year}</td>
+          <td>${devotional.reason}</td>
+          <td><button onclick="deleteDevotional(${index})">Delete</button></td>
+        `;
+        tableBody.appendChild(newRow);
+      });
+    }
+
+    // Delete devotional
+    function deleteDevotional(index) {
+      devotionals.splice(index, 1);
+      localStorage.setItem('devotionals', JSON.stringify(devotionals));
+      renderTable();
+    }
+
+    // Initial render
+    renderTable();
+
+    // Add new devotional
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const newDevotional = {
+        speaker: document.getElementById('speaker').value,
+        title: document.getElementById('title').value,
+        location: document.getElementById('location').value,
+        year: document.getElementById('year').value,
+        reason: document.getElementById('reason').value
+      };
+
+      devotionals.push(newDevotional);
+      localStorage.setItem('devotionals', JSON.stringify(devotionals));
+      renderTable();
+      form.reset();
+    });
+  </script>
+</body>
+</html>

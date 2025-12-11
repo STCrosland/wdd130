@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images of Christ</title>
+    <style>
+        body {
+            background: black;
+        }
+        #wrapper{
+            width: 800px;
+            margin: 0 auto;
+        }
+        nav {
+            color: white;
+            text-align: center;
+            font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+        #gallery{
+            display: grid;
+            grid-template-columns: 200px 200px 200px 200px;
+            border: 15px solid rgb(255, 255, 255);
+            width: 100%;
+            background-color: #ddd;
+            background-image:
+                linear-gradient(45deg, #ccc 26%, transparent 26%), 
+                linear-gradient(135deg, #ccc 26%, transparent 26%),
+                linear-gradient(45deg, transparent 75%, #ccc 75%),
+                linear-gradient(135deg, transparent 75%, #ccc 75%);
+            background-size: 20px 20px; /* Must be a square */
+            background-position: 0 0, 10px 0, 10px -10px, 0px 10px; 
+            
+        }
+        #gallery a {
+            cursor: url('images/christus.png'), pointer;
+        }
+        #gallery img {
+            width: 200px;
+            height: 300px;
+            opacity:50%;
+            display:block;
+        }
+        #gallery img:hover{
+            opacity: 100%;
+        }
+
+        footer {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 10px;
+      border-radius: 15px;
+      font-size: 14px;
+      color: #fff;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    footer ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 5px 0;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    footer ul a {
+      text-decoration: none;
+      color: #fff;
+      transition: color 0.3s;
+    }
+
+    footer ul a:hover {
+      color: #7fc0ff;
+    }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <nav>
+            <h1>Christ Art Gallery</h1>
+        </nav>
+        <main>
+            <div id="gallery">
+                <a href="images/big/img1.jpeg"><img src="images/small/img1.jpeg" alt="Small file size" ></a>
+                <a href="images/big/img2.png"><img src="images/small/img2.jpeg" alt="Small file size" ></a>
+                <a href="images/big/img3.png"><img src="images/small/img3.jpeg" alt="Small file size" ></a>
+                <a href="images/big/img4.png"><img src="images/small/img4.jpeg" alt="Small file size" ></a>
+                <a href="images/big/img5.png"><img src="images/small/img5.jpeg" alt="Small file size" ></a>
+                <a href="images/big/img6.png"><img src="images/small/img6.jpeg" alt="Small file size" ></a>
+                <a href="images/big/img7.png"><img src="images/small/img7.jpeg" alt="Small file size" ></a>
+                <a href="images/big/img8.png"><img src="images/small/img8.jpeg" alt="Small file size" ></a>
+                <a href="images/big/img9.png"><img src="images/small/img9.jpeg" alt="Small file size" ></a>
+                <a href="images/big/img10.png"><img src="images/small/img10.jpeg" alt="Small file size" ></a>
+                <a href="images/big/img11.png"><img src="images/small/img11.png" alt="Small file size" ></a>
+                <a href="images/big/img12.png"><img src="images/small/img12.jpeg" alt="Small file size" ></a>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+    <ul>
+      <a href="../../../../index.html">Home</a>
+      <a href="../../../../WWR/index.html">WWR</a>
+      <a href="../../../../ice.html">ICE</a>
+      <a href="../../../../about_me.html">About Me</a>
+    </ul>
+    <p>&copy; 2025 Spencer T. Crosland</p>
+  </footer>
+
+</body>
+</html>

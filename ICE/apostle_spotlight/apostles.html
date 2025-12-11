@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apostle Spotlight</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #E8ECEC;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    #wrapper {
+      flex: 1; /* grow to fill space */
+      max-height: 700px;
+      width: 900px;
+      margin: 20px auto 0 auto;
+      background: url("images/christus.webp") no-repeat center center;
+      background-size: cover;
+      border: 8px solid black;
+      border-radius: 35px;
+      box-sizing: border-box;
+      text-align: center;
+      color: white;
+      padding-top: 15px;
+      position: relative;
+    }
+
+    h2, h3 {
+      margin: 5px 0;
+      font-weight: bold;
+    }
+
+    h2 { font-size: 26px; }
+    h3 { font-size: 20px; margin-top: 15px; }
+
+    .first-presidency {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 10px;
+    }
+
+    .card-wrapper {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .first-card, .apostle-card {
+      border: 5px solid white;
+      border-radius: 50%;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: border-color 0.3s;
+      cursor: pointer;
+    }
+
+    .first-card { height: 145px; width: 145px; border-width: 6px; }
+    .apostle-card { height: 110px; width: 110px; }
+
+    .first-card img, .apostle-card img {
+      height: 100%;
+      width: auto;
+      display: block;
+    }
+
+    .first-card:hover,
+    .apostle-card:hover {
+      border-color: #7fc0ff;
+    }
+
+    .tooltip {
+      position: absolute;
+      bottom: 120%;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: rgba(0,0,0,0.8);
+      color: #fff;
+      padding: 8px 12px;
+      border-radius: 8px;
+      text-align: center;
+      font-size: 14px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s;
+      width: 200px;
+      z-index: 10;
+    }
+
+    .first-presidency .tooltip {
+      top: 120%;
+      bottom: auto;
+    }
+
+    .card-wrapper:hover .tooltip {
+      opacity: 1;
+    }
+
+    .tooltip h4 {
+      margin: 0 0 5px 0;
+      font-size: 16px;
+    }
+
+    .tooltip p {
+      margin: 0;
+      font-size: 13px;
+      line-height: 1.2;
+    }
+
+    .quorum-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(3, auto);
+      justify-items: center;
+      gap: 15px;
+      margin: 10px auto 0;
+      width: 85%;
+    }
+
+    footer {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 10px;
+      border-radius: 15px;
+      font-size: 14px;
+      color: #fff;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    footer ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 5px 0;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    footer ul a {
+      text-decoration: none;
+      color: #fff;
+      transition: color 0.3s;
+    }
+
+    footer ul a:hover {
+      color: #7fc0ff;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrapper">
+    <h2 id="first-presidency">First Presidency</h2>
+    <div class="first-presidency">
+      <div class="card-wrapper">
+        <div class="first-card">
+          <img src="images/oaks.webp" alt="Elder Oaks">
+        </div>
+        <div class="tooltip">
+          <h4>Dallin H. Oaks</h4>
+          <p>"The only permanent solution to the differences that divide us is for all of us to follow our Savior’s teachings and to gradually become even as He is."</p>
+        </div>
+      </div>
+
+      <div class="card-wrapper">
+        <div class="first-card">
+          <img src="images/nelson.webp" alt="President Nelson">
+        </div>
+        <div class="tooltip">
+          <h4>Russell M. Nelson</h4>
+          <p>"The joy we feel has little to do with the circumstances of our lives and everything to do with the focus of our lives"</p>
+        </div>
+      </div>
+
+      <div class="card-wrapper">
+        <div class="first-card">
+          <img src="images/eyring.webp" alt="Elder Eyring">
+        </div>
+        <div class="tooltip">
+          <h4>Henry B. Eyring</h4>
+          <p>"Brothers and sisters, I humbly testify that as we attend the temple, we can be reminded of the eternal nature of our spirits, our relationship with the Father and His divine Son, and our ultimate desire to return to our heavenly home"</p>
+        </div>
+      </div>
+    </div>
+
+    <h3 id="Quorum-of-twlve">Quorum of the Twelve Apostles</h3>
+    <div class="quorum-grid">
+      <div class="card-wrapper">
+        <div class="apostle-card">
+          <img src="images/holland.webp" alt="Elder Holland">
+        </div>
+        <div class="tooltip"><h4>Jeffrey R. Holland</h4><p>"Come as you are, but don't plan to stay as you are"</p></div>
+      </div>
+      <div class="card-wrapper">
+        <div class="apostle-card">
+          <img src="images/uchtdorf.webp" alt="Elder Uchtdorf">
+        </div>
+        <div class="tooltip"><h4>Dieter F. Uchtdorf</h4><p>"Though choices may have taken you far away from the Savior and His Church, the Master Healer stands at the road that leads home, welcoming you. And we as members of the Church of Jesus Christ seek to follow His example and embrace you as our brothers and sisters, as our friends. We rejoice and celebrate with you"</p></div>
+      </div>
+      <div class="card-wrapper">
+        <div class="apostle-card">
+          <img src="images/bednar.webp" alt="Elder Bednar">
+        </div>
+        <div class="tooltip"><h4>David A. Bednar</h4><p>"In the strength of the Lord we can do and endure and overcome all things"</p></div>
+      </div>
+      <div class="card-wrapper">
+        <div class="apostle-card">
+          <img src="images/cook.webp" alt="Elder Cook">
+        </div>
+        <div class="tooltip"><h4>Quentin L. Cook</h4><p>"Immersion in the scriptures is essential for spiritual nourishment"</p></div>
+      </div>
+
+      <div class="card-wrapper">
+        <div class="apostle-card">
+          <img src="images/christofferson.webp" alt="Elder Christofferson">
+        </div>
+        <div class="tooltip"><h4>Todd D. Christofferson</h4><p>"We now see that what had seemed overwhelming and impossible can, with the Lord’s help, find resolution, and we are more certain of His help. ... In short, with our time in the temple we have been refined, even if only in a small degree, and heaven is that much closer"</p></div>
+      </div>
+      <div class="card-wrapper">
+        <div class="apostle-card">
+          <img src="images/anderson.webp" alt="Elder Andersen">
+        </div>
+        <div class="tooltip"><h4>Neil L. Andersen</h4><p>"The invitation to enter the sacred covenant of baptism and receive the Holy Ghost is a missionary’s precious gift. If accepted and righteously received, this precious gift opens the door to the kingdom of God. If embraced as the first ordinance on the covenant path, the future is glorious and far-reaching"</p></div>
+      </div>
+      <div class="card-wrapper">
+        <div class="apostle-card">
+          <img src="images/rasband.webp" alt="Elder Rasband">
+        </div>
+        <div class="tooltip"><h4>Ronald A. Rasband</h4><p>"Reaching out to rescue one another under ANY condition is an eternal measure of love"</p></div>
+      </div>
+      <div class="card-wrapper">
+        <div class="apostle-card">
+          <img src="images/stevenson.webp" alt="Elder Stevenson">
+        </div>
+        <div class="tooltip"><h4>Gary E. Stevenson</h4><p>"Let your friends see the joy you feel in living the gospel, and you will be the best gospel message they ever receive"</p></div>
+      </div>
+
+      <div class="card-wrapper">
+        <div class="apostle-card">
+          <img src="images/renlund.webp" alt="Elder Renlund">
+        </div>
+        <div class="tooltip"><h4>Dale G. Renlund</h4><p>"Just as dynamite without nitroglycerin is unremarkable, the Savior’s Church is special only if it is built on His gospel. Without the Savior’s gospel and the authority to administer the ordinances thereof, the Church isn’t exceptional."</p></div>
+      </div>
+      <div class="card-wrapper">
+        <div class="apostle-card">
+          <img src="images/gong.webp" alt="Elder Gong">
+        </div>
+        <div class="tooltip"><h4>Gerrit W. Gong</h4><p>"Bless your family and serve in the Church. Faith in Jesus Christ and obedience to Him bring the Spirit and spiritual growth. Then we can have confidence to stand still and feel the Lord’s peace, assurance and blessings — in His time and way"</p></div>
+      </div>
+      <div class="card-wrapper">
+        <div class="apostle-card">
+          <img src="images/soares.webp" alt="Elder Soares">
+        </div>
+        <div class="tooltip"><h4>Ulisses Soares</h4><p>“As disciples of Christ, we are invited to increase our faith in, and love for, our spiritual brother and sisterhood by genuinely knitting our hearts together in unity and love, regardless of our differences, thereby increasing our ability to promote respect for the dignity of all the sons and daughters of God"</p></div>
+      </div>
+      <div class="card-wrapper">
+        <div class="apostle-card">
+          <img src="images/kearon.webp" alt="Elder Kearon">
+        </div>
+        <div class="tooltip"><h4>Patrick Kearon</h4><p>"You are led by optimists. ... Stop worrying so much — just work hard and be happy"</p></div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <ul>
+      <a href="../../../../index.html">Home</a>
+      <a href="../../../../WWR/index.html">WWR</a>
+      <a href="../../../../ice.html">ICE</a>
+      <a href="../../../../about_me.html">About Me</a>
+    </ul>
+    <p>&copy; 2025 Spencer T. Crosland</p>
+  </footer>
+</body>
+</html>

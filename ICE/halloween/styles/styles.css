@@ -1,0 +1,128 @@
+/* Body */
+body {
+    font-family: 'Creepster', cursive, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url(../images/Spooky_background.gif);
+    color: #ffa500; /* default orange text */
+}
+
+#wrapper {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background: rgba(30, 0, 30, 0.85);
+    border: 5px solid #ff8c00;
+    border-radius: 20px;
+    box-shadow: 0 0 20px #ff8c00;
+}
+
+/* EADER / NAV  */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav ul li {
+    padding: 10px 20px;
+    background: #330033; /* dark purple */
+    border: 2px solid #ff8c00;
+    border-radius: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+nav ul li:hover {
+    background: url(../images/Pumpkins.gif) repeat;
+    color: #fbfbfb;
+    transform: scale(1.1);
+}
+
+/*  MAIN CONTENT  */
+main h1 {
+    background: url(../images/eyes.gif)no-repeat center;
+    text-align: center;
+    font-size: 3em;
+    color: #ff8c00;
+    text-shadow: 2px 2px 5px #330033;
+    margin-bottom: 20px;
+}
+
+main img {
+    display: block;
+    margin: 0 auto 20px auto;
+    max-width: 80%;
+    border: 5px solid #ff8c00;
+    border-radius: 15px;
+    box-shadow: 0 0 15px #ff8c00;
+}
+
+/* SECTIONS  */
+section {
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ff8c00;
+}
+
+/* Individual section styles */
+.pumpkins {
+    background: #4b0033;
+    border-left: 5px solid #ff8c00;
+}
+
+
+.bats {
+    background: #33004d;
+    border-left: 5px solid #ff7518;
+    color: #f5c27f;
+}
+
+.skeletons {
+    background: #3d003d;
+    border-left: 5px solid #ffa500;
+    color: #ffd27f;
+}
+
+section h2 {
+    margin-top: 0;
+    color: #ffa500;
+    text-shadow: 1px 1px 3px #330033;
+}
+
+section p {
+    line-height: 1.6;
+    color: #00ff00; /* paragraphs  green */
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+    background: url(../images/Bats.gif);
+    text-align: center;
+    padding: 15px;
+    border-top: 2px solid #ff8c00;
+    color: #ffa500;
+    text-shadow: 1px 1px 3px #330033;
+}
+
+
+/* ---------- FUN OVERLAY ---------- */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('images/spooky_overlay.png') repeat;
+    opacity: 0.05;
+    pointer-events: none;
+}
