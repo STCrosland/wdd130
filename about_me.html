@@ -1,0 +1,161 @@
+<!-- 
+Title: Spencer Crosland Portal Page
+Author: Spencer T. Crosland
+Purpose: Create a Portal Page with information, favorites table, and a contact form
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Character encoding for the page -->
+    <meta charset="UTF-8">
+    <!-- Responsive design for mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title displayed in the browser tab -->
+    <title>Spencer T. Crosland's About Me Page</title>
+    <!-- Link to external CSS stylesheet -->
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+    <!-- Main container for the entire page -->
+    <div id="wrapper">
+
+        <!-- Header section with logo and page title -->
+        <header>
+            <!-- Logo image -->
+            <img src="images/Crosland_Corp_logo.png" alt="Crosland Corporation Logo" style="max-width:300px; height: 180px;">
+
+        </header>
+
+        <!-- Navigation bars -->
+        <nav style="display: flex; justify-content: center; gap: 100px; padding: 15px 10px;">
+            <a href="index.html">Home</a>
+            <a href="WWR/index.html">WWR</a>
+            <a href="ice.html">ICE</a>
+            <a href="about_me.html">About</a>
+            <a href="report.html"> Report </a>
+        </nav>
+
+        <!-- Main content area -->
+        <main>
+
+            <!-- Content section with about info and favorites table -->
+            <div id="content">
+                <!-- Section heading -->
+                <h1>About Spencer T. Crosland</h1>
+                <!-- Image representing the author -->
+                <img src="images/coding_koala.png" 
+                    alt="Koala coding"  
+                    style="max-width: 600px; height: 500px; display: block; margin: 0 150px;">
+
+                <!-- Subheading for favorites table -->
+                <h2>My Favorites</h2>
+                <!-- Table listing favorite things -->
+                <table class="greenTable">
+                    <caption>These are a few of Spencer T. Crosland's Favorite Things</caption> <!-- Accessible description for table -->
+                    <thead>
+                        <tr>
+                            <th>Color</th>
+                            <th>Food</th>
+                            <th>Movie</th>
+                            <th>Muppet</th>
+                            <th>Sport</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Green</td>
+                            <td>Lamb</td>
+                            <td>Star Wars: Revenge of the Sith</td>
+                            <td>Gonzo</td>
+                            <td>Surfing</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Sidebar/form section -->
+            <section id="ads">
+                <!-- Contact form -->
+                <form>
+                    <!-- First Name input -->
+                    <div>
+                        <label for="first-name">First Name</label>
+                        <input type="text" id="first-name" name="first_name" required>
+                    </div>
+
+                    <!-- Last Name input -->
+                    <div>
+                        <label for="last-name">Last Name</label>
+                        <input type="text" id="last-name" name="last_name" required>
+                    </div>
+
+                    <!-- Email input -->
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <!-- Gender radio buttons -->
+                    <fieldset>
+                        <legend>Gender</legend>
+                        <label><input type="radio" name="gender" value="male" required> Male</label>
+                        <label><input type="radio" name="gender" value="female"> Female</label>
+                    </fieldset>
+
+                    <!-- Country selection dropdown -->
+                    <div>
+                        <label for="country">Country</label>
+                        <select id="country" name="country" required>
+                            <option value="" selected disabled>Select your country</option>
+                            <option value="us">United States</option>
+                            <option value="ca">Canada</option>
+                            <option value="uk">United Kingdom</option>
+                            <option value="au">Australia</option>
+                            <option value="de">Germany</option>
+                            <option value="in">India</option>
+                            <option value="jp">Japan</option>
+                        </select>
+                    </div>
+
+                    <!-- Favorite Bears checkboxes -->
+                    <fieldset>
+                        <legend>Favorite Bears</legend>
+                        <label><input type="checkbox" name="creatures[]" value="Grizzly"> Grizzly</label>
+                        <label><input type="checkbox" name="creatures[]" value="Panda"> Panda</label>
+                        <label><input type="checkbox" name="creatures[]" value="Koala"> Koala</label>
+                    </fieldset>
+
+                    <!-- Notes textarea -->
+                    <div>
+                        <label for="notes">Notes</label>
+                        <textarea id="notes" name="notes" rows="4" cols="20" placeholder="Anything else you'd like to add?"></textarea>
+                    </div>
+
+                    <!-- Submit button -->
+                    <div>
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
+            </section>
+
+        </main>
+
+    </div>
+
+        <!-- Footer with navigation links and copyright -->
+        <footer>
+            <ul>
+            <a href="index.html">Home</a>
+            <a href="WWR/index.html">WWR</a>
+            <a href="ice.html">ICE</a>
+            <a href="about_me.html">About</a>
+            <a href="report.html"> Report </a>
+            </ul>
+
+            <p>&copy; 2025 Spencer T. Crosland</p>
+        </footer>
+
+</body>
+</html>
