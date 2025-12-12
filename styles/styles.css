@@ -45,8 +45,8 @@ nav {
     align-items: center;
     gap: 50px; 
     height: 50px; 
-    border-top: 3px solid #000;
-    border-bottom: 5px solid #000;
+    border-top: 7px solid #f98e1b;
+    border-bottom: 7px solid #f98e1b;
     padding: 0 20px;
     box-sizing: border-box;
 }
@@ -74,13 +74,20 @@ main h1 {
     text-align: center;
     font-size: 3em;
     color: #e98411;
-    text-shadow: 2px 2px 5px #330033;
+    text-shadow: 4px 4px 7px #000;
     margin-bottom: 20px;
 }
 main h2{
 
-    color: #e98411;
-    text-shadow: 2px 2px 5px #330033;
+    color: #ffea08;
+    text-shadow: 4px 4px 7px #e0e0e0;
+    margin-bottom: 20px;
+}
+
+main h3{
+
+    color: #ffffff;
+    text-shadow: 4px 4px 7px #000;
     margin-bottom: 20px;
 }
 
