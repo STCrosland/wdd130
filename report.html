@@ -1,41 +1,45 @@
 <!--
-Title: report
-Authors: Spencer T. Crosland, 
-Purpose: Repoet Page to give final project report
+Title: Report
+Authors: Spencer T. Crosland
+Purpose: Report Page to give final project report
 -->
 
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Spencer T. Crosland's Portal Page Report</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spencer T. Crosland's Portal Report Page</title>
     <link rel="stylesheet" href="styles/styles.css">
-    </head>
+</head>
+<body>
 
-    <body>
+<div id="wrapper">
 
-        <main>
-            <div id="wrapper">
-                <!-- Header -->
-                <header>
-                <img src="images/Crosland_Corp_logo.png" alt="Crosland Corporation Logo" style="max-width:300px; height:180px;">
-                </header>
+    <!-- Header -->
+    <header>
+        <img src="images/Crosland_Corp_logo.png"
+             alt="Crosland Corporation Logo"
+             style="max-width:300px; height:180px;">
+    </header>
 
-                <!-- Navigation -->
-                <nav style="display: flex; justify-content: center; gap: 100px; padding: 15px 10px;">
-                <a href="index.html">Home</a>
-                <a href="WWR/index.html">WWR</a>
-                <a href="ice.html">ICE</a>
-                <a href="about_me.html">About</a>
-                <a href="report.html"> Report </a>
-            
-                </nav>
+    <!-- Navigation -->
+    <nav style="display: flex; justify-content: center; gap: 100px; padding: 15px 10px;">
+        <a href="index.html">Home</a>
+        <a href="WWR/index.html">WWR</a>
+        <a href="ice.html">ICE</a>
+        <a href="about_me.html">About</a>
+        <a href="report.html">Report</a>
+    </nav>
 
-                <!-- Main Content -->
-                <h1>
-                    Final Reports
-                </h1>
+    <!-- Main Content -->
+    <main>
+
+        <div class="main-content">
+
+            <h1>
+                Final Reports
+            </h1>
                     
                 <h2>
                     Client Report
@@ -178,22 +182,80 @@ Purpose: Repoet Page to give final project report
                         <p>
 
                         </p>
-
             </div>
-        </main>
 
-         <!-- Footer -->
-        <footer>
-            <ul>
-                <a href="index.html">Home</a>
-                <a href="WWR/index.html">WWR</a>
-                <a href="ice.html">ICE</a>
-                <a href="about_me.html">About</a>
-                <a href="report.html"> Report </a>
-            </ul>
-            <p>&copy; 2025 Spencer T. Crosland</p>
-        </footer>
+        <!-- Sidebar/form section -->
+        <section id="ads">
+            <form>
+                <div>
+                    <label for="first-name">First Name</label>
+                    <input type="text" id="first-name" name="first_name" required>
+                </div>
 
-    </body>
+                <div>
+                    <label for="last-name">Last Name</label>
+                    <input type="text" id="last-name" name="last_name" required>
+                </div>
 
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <fieldset>
+                    <legend>Gender</legend>
+                    <label><input type="radio" name="gender" value="male" required> Male</label>
+                    <label><input type="radio" name="gender" value="female"> Female</label>
+                </fieldset>
+
+                <div>
+                    <label for="country">Country</label>
+                    <select id="country" name="country" required>
+                        <option value="" selected disabled>Select your country</option>
+                        <option value="us">United States</option>
+                        <option value="ca">Canada</option>
+                        <option value="uk">United Kingdom</option>
+                        <option value="au">Australia</option>
+                        <option value="de">Germany</option>
+                        <option value="in">India</option>
+                        <option value="jp">Japan</option>
+                    </select>
+                </div>
+
+                <fieldset>
+                    <legend>Favorite Bears</legend>
+                    <label><input type="checkbox" name="creatures[]" value="Grizzly"> Grizzly</label>
+                    <label><input type="checkbox" name="creatures[]" value="Panda"> Panda</label>
+                    <label><input type="checkbox" name="creatures[]" value="Koala"> Koala</label>
+                </fieldset>
+
+                <div>
+                    <label for="notes">Notes</label>
+                    <textarea id="notes" name="notes" rows="4" cols="20"
+                        placeholder="Anything else you'd like to add?"></textarea>
+                </div>
+
+                <div>
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </section>
+
+    </main>
+
+</div>
+
+<!-- Footer -->
+<footer>
+    <ul>
+        <a href="index.html">Home</a>
+        <a href="WWR/index.html">WWR</a>
+        <a href="ice.html">ICE</a>
+        <a href="about_me.html">About</a>
+        <a href="report.html">Report</a>
+    </ul>
+    <p>&copy; 2025 Spencer T. Crosland</p>
+</footer>
+
+</body>
 </html>
