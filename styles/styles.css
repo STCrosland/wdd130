@@ -26,15 +26,29 @@ body {
 
 /*  Header */
 header {
-    background: url("../images/Eucalyptus_trees.jpeg") center center / cover no-repeat;
+     background: url("../images/Eucalyptus_trees.jpeg") center / cover no-repeat;
     height: 178px;
-    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0;          
+    margin: 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3em;
+    color: #f40404;
+    text-shadow: 9px 9px 15px #000;
+    padding-left: 90px;
 }
 
 header img {
-    width: 178 ;
-    height: auto;
+    display: block;
+    width: 180px;
+    height: 178px;       
+    margin: 0;  
 }
+
 
 
 /* Navagation  */
